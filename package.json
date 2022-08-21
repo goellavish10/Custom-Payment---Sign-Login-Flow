@@ -1,0 +1,23 @@
+{
+  "name": "custom-api",
+  "version": "1.0.0",
+  "description": "Login and Sign Up flow api with custom payment page",
+  "main": "app.js",
+  "author": "Lavish Goyal",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.2",
+    "morgan": "^1.10.0",
+    "sib-api-v3-sdk": "^8.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
