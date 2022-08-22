@@ -4,6 +4,7 @@ const { encrypt } = require("../utils/encryptDecrypt");
 const sendEmail = async (obj) => {
   try {
     const { email, userId, name } = obj;
+    const { iv: xiv, encryptedData: encryptedUserId } = encrypt(userId);
     const emailData = {
       sender: {
         name: "AlienBot",
@@ -22,7 +23,7 @@ const sendEmail = async (obj) => {
         process.env.NODE_ENV === undefined
           ? process.env.DEVELOPMENT_URL
           : process.env.PRODUCTION_URL
-      }/auth/verify-user/${userId}/${xiv}">Verify Email</a>`
+      }/auth/verify-user/${encryptedUserId}/${xiv}">Verify Email</a>`
     };
     axios
       .post(

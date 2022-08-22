@@ -1,5 +1,6 @@
 const User = require("../Models/User");
 const bcrypt = require("bcrypt");
+const sendEmail = require("../utils/sendEmail");
 module.exports.userSignUpController = async (req, res) => {
   try {
     const { name, email, username, password: plainTextPassword } = req.body;
@@ -18,6 +19,9 @@ module.exports.userSignUpController = async (req, res) => {
       username: username,
       password: hashedPassword
     });
+
+    sendEmail({ email: user.email, userId: user.id, name: user.name });
+
     await user.save();
   } catch (err) {
     console.log(err);
