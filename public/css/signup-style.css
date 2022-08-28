@@ -1,0 +1,115 @@
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+/* Background color for whole of the page */
+body {
+    background-color: black;
+}
+/* Main container of all the content */
+.container {
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(109, 109, 109,0.2);
+    box-shadow: 2px;
+    padding: 3rem;
+    border-radius: 15px;
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 75px;
+}
+/* styling the logo */
+#logo {
+    margin-left: 20px;
+    margin-bottom: 35px;
+    height: 50px;
+}
+/* Styling the input bars */
+.input-bar {
+    margin-bottom: 5px;
+    width: 282px;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    background-color: rgb(66, 64, 64, 0.4);
+    border-radius: 10px;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+    color: white;
+}
+/* Styling the country code  */
+#country-code{
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    background-color: rgb(66, 64, 64, 0.4);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+    margin-right: -4px;
+    color: white;
+}
+/* For the input of the phone number */
+#phone-number-input{
+    width: 215px;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    background-color: #424040;
+    background-color: rgb(66, 64, 64, 0.4);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+    color: white;
+
+}
+/* To change the color of the input text-area */
+input:focus{
+    color: white;
+}
+
+/* For styling the a tag */
+.linkk {
+    color: rgba(118, 237, 7,0.8);
+    text-decoration: none;
+}
+
+/* For styling the button  */
+#btn {
+    /* margin-top: 20px; */
+    padding: 13px 0px;
+    width: 305px;
+    font-size: 1.2rem;
+    background-color: rgba(118, 237, 7,0.9);
+    border-radius: 15px;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+
+
+}
+/* styling the text in terms and condition line */
+#text {
+    display: inline;
+    color: rgb(174, 174, 174);
+}
+#text2{
+    text-decoration: none;
+    color: rgba(118, 237, 7,0.9);
+}
+
+#checkbox{
+    margin-top: 10px;
+    size: 1.2rem;
+    background-color: #424040;
+}

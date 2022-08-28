@@ -1,0 +1,97 @@
+.settings{
+	background-color:#070707;
+}
+
+.main-body{
+	border: 2px solid rgba(109, 109, 109,0.2);
+	padding: 70px 50px;
+	border-radius: 10px;
+	margin-top: 95px;
+
+}
+.settings-heading{
+	font-family: 'Public Sans', sans-serif;
+	color: #a2ff00;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top:-3rem ;
+	font-size: 4rem;
+	font-weight: bolder;
+}
+
+.settings-subheading{
+	color: #a2ff00;
+	/* color: white; */
+    display: flex;
+    justify-content: left;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+
+.input-box{
+	margin-top: 10px;
+	padding: 10px ;
+	/* padding-left: 10px; */
+	width:100%;
+	border-radius: 10px;
+	border: 1px solid rgba(128, 128, 128,0.5);
+	font-size: 1.5rem;
+	background-color: #424040;
+	color: white;
+}
+
+.update-para{
+	color: white;
+	font-size: 1rem;
+	font-weight: 100;
+}
+
+#btn {
+    margin-top: 20px;
+    padding: 13px 0px;
+    width: 305px;
+    font-size: 1.2rem;
+    background-color: rgba(118, 237, 7,0.9);
+    /* color: rgb(118, 237, 7); */
+    border-radius: 15px;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none;
+}
+
+.new-btn{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: -14px;
+	font-size: 2rem;
+}
+
+.new-btn .button-1 {
+	font-size: 2.5rem;
+}
+.settings-active{
+	margin-top: 10rem;
+}
+@media (max-width: 733px) {
+
+	.settings-active{
+		margin-top: 15rem;
+	}
+}
+@media (max-width: 710px) {
+
+	.settings-active{
+		margin-top: 20rem;
+	}
+}
+@media (max-width: 380px) {
+
+	.settings-active{
+		margin-top: 18rem;
+	}
+}

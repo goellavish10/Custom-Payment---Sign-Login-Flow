@@ -4,6 +4,9 @@ const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
 const cookieParser = require("cookie-parser");
+const compression = require("compression");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 
 // MongoDB Connection
 const connectDB = require("./config/db");

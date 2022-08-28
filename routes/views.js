@@ -1,44 +1,30 @@
 const express = require("express");
-const { authentication } = require("../middlewares");
-const User = require("../Models/User");
+const {
+  homepage,
+  signUpPage,
+  loginPage
+} = require("../controllers/viewsController/authPages");
+const {
+  userVerification
+} = require("../controllers/viewsController/confirmationMessages");
+const {
+  dashboardPage,
+  userAccountPage
+} = require("../controllers/viewsController/dashboard");
+const { authentication, isLoggedIn } = require("../middlewares");
 
 const router = express.Router();
 
-router.get("/sign-up", (req, res) => {
-  try {
-    res.render("sign-up");
-  } catch (err) {
-    console.log(err);
-    res.render("error", {
-      message: "Server error!, please try again later"
-    });
-  }
-});
+router.get("/", isLoggedIn, homepage);
 
-router.get("/login", (req, res) => {
-  try {
-    res.render("login");
-  } catch (err) {
-    console.log(err);
-    res.render("error", {
-      message: "Server error!, please try again later"
-    });
-  }
-});
+router.get("/sign-up", isLoggedIn, signUpPage);
 
-router.get("/dashboard", authentication, async (req, res) => {
-  try {
-    const user = await User.findById(req.user._id);
-    res.render("dashboard", {
-      name: user.name,
-      email: user.email
-    });
-  } catch (err) {
-    console.log(err);
-    res.render("error", {
-      message: "Server error!, please try again later"
-    });
-  }
-});
+router.get("/login", isLoggedIn, loginPage);
+
+router.get("/dashboard", authentication, dashboardPage);
+
+router.get("/user-verification/:encryptedUserId/:xiv", userVerification);
+
+router.get("/account/:username", authentication, userAccountPage);
 
 module.exports = router;

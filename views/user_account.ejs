@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/Fevicon.png" />
+    <title>AlienBot</title>
+
+    <!-- font awesome cdn link  -->
+    <script src="https://kit.fontawesome.com/5f407f96c4.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap css file link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/settings.css" />
+</head>
+
+<body>
+    <!--============== header section starts ================-->
+
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo/AlienBot 1110 1.svg" alt=""></a>
+        <nav class="navbar">
+            <a class="nav-active" href="index.html">Home</a>
+            <a href="#">Service</a>
+            <a href="members.html">Members</a>
+            <a href="#">Status</a>
+            <button class="button-1">Sale</button>
+            <button class="button-2"><i class="fa-solid fa-gear"></i> Settings</button>
+        </nav>
+        <div class="icons">
+            <button class="button-1">Sale</button>
+            <button class="button-2"><i class="fa-solid fa-gear"></i> Settings</button>
+            <button class="login"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogIn</button>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+
+    <!--============= header section ends =============-->
+
+
+    <!-- Settings section start -->
+    <section class="settings">
+        <div class="main-body">
+            <div class="settings-heading">
+                Account Settings
+            </div>
+            <form>
+
+                <div class="change-name">
+                    <h3 class="settings-subheading">Update Name</h3>
+                    <div class="update-para">
+                    </div>
+                    <div class="change-settings">
+                        <input type="text" placeholder="Enter new name" id="name" class="input-box" value="<%=name%>">
+                    </div>
+                </div>
+                <div class="change-name">
+                    <h3 class="settings-subheading">Update Username</h3>
+                    <div class="update-para">
+                    </div>
+                    <div class="change-settings">
+                        <input type="text" placeholder="Enter new Username " id="username" class="input-box"
+                            value="<%=username%>">
+                    </div>
+                </div>
+                <div class="change-name">
+                    <h3 class="settings-subheading">Update Phone number</h3>
+                    <div class="update-para">
+                        <!-- <p style="margin-bottom: 0px;">You will be redirected to phone number verification page for OTP . </p> -->
+                    </div>
+                    <div class="change-settings">
+                        <input type="number" placeholder="Enter new phone number " id="phone" class="input-box"
+                            value="<%=phone%>">
+                    </div>
+                </div>
+                <div class="change-name">
+                    <h3 class="settings-subheading">Update Password</h3>
+                    <div class="update-para">
+                    </div>
+                    <div class="change-settings">
+                        <input type="password" placeholder="Enter new Password " id="password" class="input-box">
+                    </div>
+                    <div class="change-settings">
+                        <input type="password" placeholder="Confirm Password " id="confirm_pass" class="input-box">
+                    </div>
+            </form>
+            <div class="chnage-settings new-btn">
+                <button class="button-1" type="button" onclick="updateUserDetails()">Save Changes</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- settings section ends -->
+
+
+    <!--============= Footer section Starts =============-->
+    <section class="footer">
+        <footer>
+            <div class="row">
+                <div class="col-md-6 py-sm-3">
+                    <div class="footer-con-left">
+                        <img src="img/AlienBot 10.png" alt="" />
+                        <div class="footer-text">
+                            <p>
+                                The User stage is the best stage for trading virtual entertainment accounts no sweat and
+                                high
+                                security,
+                            </p>
+                        </div>
+                        <div class="icon-box">
+                            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa-brands fa-discord"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 py-sm-3">
+                    <div class="footer-con-right">
+                        <h3>Quick links</h3>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Terms.html">Sign in</a></li>
+                        <li><a href="#">Register a new account</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Help Center </a></li>
+                    </div>
+                </div>
+                <div class="col-md-3 py-3">
+                    <div class="footer-con-right">
+                        <h3>Sub links</h3>
+                        <li><a href="#">Post For</a></li>
+                        <li><a href="#">Podium Store</a></li>
+                        <li><a href="#">podium store</a></li>
+                        <li><a href="#">Financial support for the platform</a></li>
+                        <li><a href="#">Leaderboard </a></li>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <hr class="footer-hr" />
+    <section class="copyright">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="first-text">Copyright 2022 Alienbot</h4>
+            </div>
+            <div class="col-md-6">
+                <h4 class="secend-text">Privacy Policy I Website Terms</h4>
+            </div>
+        </div>
+    </section>
+    <!--============= Footer section ends =============-->
+
+    <!-- Bootstrap js file link  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- custom js file link  -->
+    <script src="/js/settings.js"></script>
+    <script>
+        localStorage.setItem("name", "<%=name%>");
+        localStorage.setItem("username", "<%=username%>");
+        localStorage.setItem("phone", "<%=phone%>");
+        localStorage.setItem("application_header", "<%=iv%>");
+        localStorage.setItem("userId", "<%=encryptedUserId%>");
+    </script>
+
+    <!-- Aos data cdn link -->
+</body>
+
+</html>

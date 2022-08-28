@@ -23,7 +23,7 @@ const sendEmail = async (obj) => {
         process.env.NODE_ENV === undefined
           ? process.env.DEVELOPMENT_URL
           : process.env.PRODUCTION_URL
-      }/auth/verify-user/${encryptedUserId}/${xiv}">Verify Email</a>`
+      }/api/v1/auth/verify-user/${encryptedUserId}/${xiv}">Verify Email</a>`
     };
     axios
       .post(
@@ -38,7 +38,7 @@ const sendEmail = async (obj) => {
         }
       )
       .then((response) => {
-        console.log(response);
+        console.log(`Email sent successfully to ${email}`);
       })
       .catch((error) => console.log(error));
   } catch (err) {
