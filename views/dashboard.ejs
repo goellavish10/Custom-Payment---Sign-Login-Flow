@@ -169,7 +169,7 @@
               24/7 Customer Support
             </p>
           </div>
-          <button class="btn-2">Get Started</button>
+          <button class="btn-2" onclick="paymentMethod()">Get Started</button>
         </div>
       </div>
       <!-- item 2 -->
@@ -198,7 +198,7 @@
               24/7 Customer Support
             </p>
           </div>
-          <button class="button-pro">Get Started</button>
+          <button class="button-pro" onclick="paymentMethod()">Get Started</button>
         </div>
       </div>
       <!-- item 3 -->
@@ -227,7 +227,7 @@
               24/7 Customer Support
             </p>
           </div>
-          <button class="btn-2">Get Started</button>
+          <button class="btn-2" onclick="paymentMethod()">Get Started</button>
         </div>
       </div>
     </div>
@@ -648,6 +648,10 @@
         localStorage.setItem("userId", "<%=encryptedUserId%>");
         localStorage.setItem("username", "<%=username%>");
         localStorage.setItem("application_header", "<%=iv%>");
+    }
+
+    function paymentMethod(){
+      window.location.href = "/payment/method"
     }
 </script>
 

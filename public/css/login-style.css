@@ -1,73 +1,71 @@
-*{
-    font-family: 'Noto Sans', sans-serif;
+* {
+  font-family: "Noto Sans", sans-serif;
 }
 body {
-    background-color: black;
+  background-color: black;
 }
 
 .container {
-    background-color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid rgba(109, 109, 109,0.2);
-    box-shadow: 2px;
-    padding: 3rem;
-    border-radius: 15px;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-bottom: 75px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(109, 109, 109, 0.2);
+  box-shadow: 2px;
+  padding: 3rem;
+  border-radius: 15px;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  padding-bottom: 75px;
 }
 
 #logo {
-    margin-left: 20px;
-    margin-bottom: 35px;
-    height: 50px;
+  margin-left: 20px;
+  margin-bottom: 35px;
+  height: 50px;
 }
 
 .inputt {
-    width: 282px;
-    padding: 10px;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    background-color: rgba(66, 64, 64, 0.4);
-    /* opacity: 0.4; */
-    border-radius: 10px;
-    box-shadow: none !important;
-    outline: none !important;
-    border: none;
-    color: white;
+  width: 282px;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  background-color: rgba(66, 64, 64, 0.4);
+  /* opacity: 0.4; */
+  border-radius: 10px;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none;
+  color: white;
 }
 
 .linkk {
-    color: rgba(118, 237, 7,0.8);
-    text-decoration: none;
+  color: rgba(118, 237, 7, 0.8);
+  text-decoration: none;
 }
 
-input:focus { 
-    outline: none !important;
-    border-color: #719ECE;
-    box-shadow: 0 0 10px #719ECE;
+input:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
 }
 
 #btn {
-    margin-top: 20px;
-    padding: 13px 0px;
-    width: 305px;
-    font-size: 1.2rem;
-    background-color: rgba(118, 237, 7,0.9);
-    /* color: rgb(118, 237, 7); */
-    border-radius: 15px;
-    box-shadow: none !important;
-    outline: none !important;
-    border: none;
-
-
+  margin-top: 20px;
+  padding: 13px 0px;
+  width: 305px;
+  font-size: 1.2rem;
+  background-color: hsla(91, 94%, 48%, 0.902);
+  /* color: rgb(118, 237, 7); */
+  border-radius: 15px;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none;
 }
 
 #text {
-    display: inline;
-    color: rgb(174, 174, 174);
+  display: inline;
+  color: rgb(174, 174, 174);
 }

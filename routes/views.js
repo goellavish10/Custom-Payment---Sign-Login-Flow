@@ -11,6 +11,10 @@ const {
   dashboardPage,
   userAccountPage
 } = require("../controllers/viewsController/dashboard");
+const {
+  choosePaymentPage,
+  makePayment
+} = require("../controllers/viewsController/paymentController");
 const { authentication, isLoggedIn } = require("../middlewares");
 
 const router = express.Router();
@@ -26,5 +30,13 @@ router.get("/dashboard", authentication, dashboardPage);
 router.get("/user-verification/:encryptedUserId/:xiv", userVerification);
 
 router.get("/account/:username", authentication, userAccountPage);
+
+router.get("/payment/method", authentication, choosePaymentPage);
+
+router.get(
+  "/payment-intent/card/:xiv/:encryptedSubscriptionId",
+  authentication,
+  makePayment
+);
 
 module.exports = router;

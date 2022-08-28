@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlienBOt</title>
+    <link rel="stylesheet" href="/css/login-style.css">
+    <link rel="stylesheet" href="/css/confirmation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="/img/AlienBot 10.png" id="logo" alt="logo-image">
+        </div>
+        <div>
+            <p style="color: white;text-align: center;">Please choose your payment method</p>
+        </div>
+        <div>
+            <button id="btn" type="button" onclick="paypalPayment()" style="cursor: pointer;">PayPal</button>
+        </div>
+        <div>
+            <button id="btn" type="button" onclick="cardPayment()" style="cursor: pointer;">Card</button>
+        </div>
+        <div style="text-align: center;margin-top: 15px;">
+            <select id="subscriptionPrice">
+                <option value="0">Select Subscription:</option>
+                <%for (let i=0; i <products.length;i++){%>
+                    <option value="<%=products[i].productId%>">$<%=products[i].price%>
+                    </option>
+                    <%}%>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        async function cardPayment() {
+            const e = document.getElementById("subscriptionPrice");
+            const productId = e.value;
+            await fetch("/api/v1/auth/payment/method", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    paymentMethod: "card",
+                    productId: productId
+                })
+            }).then((res) => {
+                return res.json()
+            }).then((data) => {
+                if (data.success === false) {
+                    alert(data.message);
+                    return;
+                }
+
+                window.location.href = data.redirectURI;
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
+    </script>
+</body>
+
+</html>

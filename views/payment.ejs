@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/login-style.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="logo">
+      <img src="/img/AlienBot 10.png" id="logo" alt="logo-image">
+  </div>
+    <form id="payment-form" data-clientSecret="<%=clientSecret%>">
+      <div id="payment-element">
+        <!-- Elements will create form elements here -->
+      </div>
+      <div>
+        <button id="btn" type="submit" style="cursor: pointer;">Subscribe</button>
+    </div>
+      <div id="error-message">
+        <!-- Display error message to your customers here -->
+      </div>
+    </form>
+  </div>
+   
+<script src="/js/subscribe.js"></script>
+</body>
+
+</html>

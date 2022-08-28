@@ -22,7 +22,7 @@ const sendEmail = async (obj) => {
       <a href="${
         process.env.NODE_ENV === undefined
           ? process.env.DEVELOPMENT_URL
-          : process.env.PRODUCTION_URL
+          : process.env.LIVE_URL
       }/api/v1/auth/verify-user/${encryptedUserId}/${xiv}">Verify Email</a>`
     };
     axios
