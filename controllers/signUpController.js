@@ -78,6 +78,17 @@ module.exports.userSignUpController = async (req, res) => {
 
     await user.save();
 
+    const customer = await stripe.customers.create({
+      name: user.name,
+      email: user.email
+    });
+
+    user = await User.findByIdAndUpdate(
+      user.id,
+      { stripeCusId: customer.id },
+      { new: true }
+    );
+
     const { iv, encryptedData: encryptedUserName } = encrypt(user.username);
 
     res.json({

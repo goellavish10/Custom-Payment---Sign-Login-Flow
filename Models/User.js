@@ -26,6 +26,9 @@ const UserSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: true
+    },
+    stripeCusId: {
+      type: String
     }
   },
   { timestamps: true }
